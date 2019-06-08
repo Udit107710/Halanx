@@ -14,6 +14,10 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 from .models import Profile, Address
 from .serializers import UpdateUserSerializer, RegisterUserSerializer, ProfileSerializer, LoginDetailSerializer, AddressSerializer, AllProfilesSerializer, FilterSerializer
 
+class IndexView(APIView):
+    def get(self, request):
+        return Response("working fine")
+
 class RegisterUserView(APIView):
     #authentication_classes = []
     def post(self, request):
