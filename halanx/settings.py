@@ -151,4 +151,4 @@ if os.path.isfile(dotenv_file):
 django_heroku.settings(locals())
 
 #print(DATABASES)
-#del DATABASES['default']['sslmode']
+del DATABASES['default']['OPTIONS']['sslmode']

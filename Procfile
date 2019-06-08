@@ -1,1 +1,1 @@
-web : gunicorn halanx.wsgi --log-file -
+web: gunicorn halanx.wsgi --log-file -
