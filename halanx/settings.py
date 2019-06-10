@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1$)0fv038n7ga^=k&snj94qma#gly-0hhfy&no7seg)!jiwyk7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'secure-castle-59071.herokuapp.com']
 
@@ -146,6 +146,7 @@ REST_FRAMEWORK = {
 # Heroku Database settings
 dotenv_file= os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
+    DEBUG= True
     dotenv.load_dotenv(dotenv_file)
 
 django_heroku.settings(locals())
